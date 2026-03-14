@@ -1,0 +1,373 @@
+//Level-1
+Q1-
+
+import java.util.Scanner;
+
+public class DivisibleBy5 {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = input.nextInt();
+
+        if (number % 5 == 0) {
+            System.out.println("The number " + number + " is divisible by 5");
+        } else {
+            System.out.println("The number " + number + " is not divisible by 5");
+        }
+    }
+}
+
+Q2-
+import java.util.Scanner;
+
+public class SmallestNumber {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int num1 = input.nextInt();
+
+        System.out.print("Enter second number: ");
+        int num2 = input.nextInt();
+
+        System.out.print("Enter third number: ");
+        int num3 = input.nextInt();
+
+        if (num1 < num2 && num1 < num3) {
+            System.out.println("The first number is the smallest");
+        } else {
+            System.out.println("The first number is not the smallest");
+        }
+    }
+}
+Q3-
+import java.util.Scanner;
+
+public class LargestNumber {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int num1 = input.nextInt();
+
+        System.out.print("Enter second number: ");
+        int num2 = input.nextInt();
+
+        System.out.print("Enter third number: ");
+        int num3 = input.nextInt();
+
+        if (num1 > num2 && num1 > num3) {
+            System.out.println("First number is the largest");
+        } 
+        else if (num2 > num1 && num2 > num3) {
+            System.out.println("Second number is the largest");
+        } 
+        else {
+            System.out.println("Third number is the largest");
+        }
+    }
+}
+Q4-
+import java.util.Scanner;
+
+public class SumNaturalNumbers {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = input.nextInt();
+
+        if (n > 0) {
+
+            int sum = n * (n + 1) / 2;
+
+            System.out.println("Sum of first " + n + " natural numbers is " + sum);
+        } 
+        else {
+            System.out.println("The number is not a natural number");
+        }
+    }
+}
+
+Q5-
+import java.util.Scanner;
+
+public class VotingEligibility {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter age: ");
+        int age = input.nextInt();
+
+        if (age >= 18) {
+            System.out.println("The person's age is " + age + " and can vote");
+        } else {
+            System.out.println("The person's age is " + age + " and cannot vote");
+        }
+    }
+}
+
+
+LEVEL-2
+Q1-import java.util.Scanner;
+
+public class OddEvenNumbers {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = input.nextInt();
+
+        if (number > 0) {
+
+            for (int i = 1; i <= number; i++) {
+
+                if (i % 2 == 0) {
+                    System.out.println(i + " is Even");
+                } else {
+                    System.out.println(i + " is Odd");
+                }
+
+            }
+
+        } else {
+            System.out.println("Not a natural number");
+        }
+
+    }
+}
+
+
+Q2-
+import java.util.Scanner;
+
+public class EmployeeBonus {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter Salary: ");
+        double salary = input.nextDouble();
+
+        System.out.print("Enter Years of Service: ");
+        int years = input.nextInt();
+
+        double bonus = 0;
+
+        if (years > 5) {
+            bonus = salary * 0.05;
+        }
+
+        System.out.println("Bonus amount: " + bonus);
+    }
+}
+
+Q3-
+import java.util.Scanner;
+
+public class MultiplicationTable {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = input.nextInt();
+
+        for (int i = 6; i <= 9; i++) {
+
+            int result = number * i;
+
+            System.out.println(number + " x " + i + " = " + result);
+
+        }
+
+    }
+}
+
+
+Q5-
+import java.util.Scanner;
+
+public class FriendsAgeHeight {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        // Input ages
+        System.out.print("Enter Sachin age: ");
+        int sachinAge = input.nextInt();
+
+        System.out.print("Enter Vaibhav age: ");
+        int vaibhavAge = input.nextInt();
+
+        System.out.print("Enter Jasvanth age: ");
+        int jasvanthAge = input.nextInt();
+
+        // Find youngest age
+        int youngest = Math.min(sachinAge, Math.min(vaibhavAge, jasvanthAge));
+
+        System.out.println("Youngest age: " + youngest);
+
+        // Input heights
+        System.out.print("Enter Sachin height: ");
+        double sachinHeight = input.nextDouble();
+
+        System.out.print("Enter Vaibhav height: ");
+        double vaibhavHeight = input.nextDouble();
+
+        System.out.print("Enter Jasvanth height: ");
+        double jasvanthHeight = input.nextDouble();
+
+        // Find tallest
+        double tallest = Math.max(sachinHeight, Math.max(vaibhavHeight, jasvanthHeight));
+
+        System.out.println("Tallest height: " + tallest);
+
+    }
+}
+
+Q6-
+import java.util.Scanner;
+
+public class FactorsOfNumber {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = input.nextInt();
+
+        System.out.println("Factors of " + number + " are:");
+
+        for (int i = 1; i <= number; i++) {
+
+            if (number % i == 0) {
+                System.out.println(i);
+            }
+
+        }
+
+    }
+}
+
+
+LEVEL-3
+Q1-import java.util.Scanner;
+
+public class LeapYearCheck {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter a year: ");
+        int year = input.nextInt();
+
+        if (year >= 1582) {
+
+            if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+                System.out.println(year + " is a Leap Year");
+            } else {
+                System.out.println(year + " is not a Leap Year");
+            }
+
+        } else {
+            System.out.println("Enter year greater than or equal to 1582");
+        }
+
+    }
+}
+
+Q2-
+import java.util.Scanner;
+
+public class GradeCalculator {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter Physics marks: ");
+        int physics = input.nextInt();
+
+        System.out.print("Enter Chemistry marks: ");
+        int chemistry = input.nextInt();
+
+        System.out.print("Enter Maths marks: ");
+        int maths = input.nextInt();
+
+        double average = (physics + chemistry + maths) / 3.0;
+
+        System.out.println("Average Marks: " + average);
+
+        if (average >= 80) {
+            System.out.println("Grade: A");
+        } 
+        else if (average >= 70) {
+            System.out.println("Grade: B");
+        } 
+        else if (average >= 60) {
+            System.out.println("Grade: C");
+        } 
+        else if (average >= 50) {
+            System.out.println("Grade: D");
+        } 
+        else if (average >= 40) {
+            System.out.println("Grade: E");
+        } 
+        else {
+            System.out.println("Grade: R (Fail)");
+        }
+
+    }
+}
+
+Q3-
+import java.util.Scanner;
+
+public class PrimeNumberCheck {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = input.nextInt();
+
+        boolean isPrime = true;
+
+        if (number <= 1) {
+            isPrime = false;
+        } 
+        else {
+
+            for (int i = 2; i <= number / 2; i++) {
+
+                if (number % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+
+            }
+
+        }
+
+        if (isPrime) {
+            System.out.println(number + " is a Prime Number");
+        } 
+        else {
+            System.out.println(number + " is not a Prime Number");
+        }
+
+    }
+}
+
+
